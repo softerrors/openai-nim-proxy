@@ -22,7 +22,7 @@ const NIM_API_KEY = process.env.NIM_API_KEY;
 const SHOW_REASONING = true; // Set to true to show reasoning with <think> tags
 
 
-const ENABLE_THINKING_MODE = false; // Set to true to enable chat_template_kwargs thinking parameter
+const ENABLE_THINKING_MODE = true; // Set to true to enable chat_template_kwargs thinking parameter
 
 
 const MODEL_MAPPING = {
@@ -30,7 +30,7 @@ const MODEL_MAPPING = {
   'gpt-4': 'qwen/qwen3-next-80b-a3b-instruct',
   'gpt-4-turbo': 'deepseek-ai/deepseek-v3.2',
   'gpt-4o': 'deepseek-ai/deepseek-v3.1',
-  'claude-3-opus': 'openai/gpt-oss-120b',
+  'claude-3-opus': 'z-ai/glm5',
   'claude-3-sonnet': 'nvidia/llama-3.1-nemotron-ultra-253b-v1',
   'gemini-pro': 'moonshotai/kimi-k2-instruct-0905' 
 };

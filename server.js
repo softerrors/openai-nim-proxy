@@ -229,6 +229,7 @@ app.post('/v1/chat/completions', async (req, res) => {
         code: error.response?.status || 500
       }
     });
+}
 
 
 app.all('*', (req, res) => {

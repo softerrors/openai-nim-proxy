@@ -218,18 +218,17 @@ app.post('/v1/chat/completions', async (req, res) => {
       res.json(openaiResponse);
     }
     
-  } catch (error) {
+} catch (error) {
     console.error('Proxy error:', error.message);
+    console.error('Full error response:', JSON.stringify(error.response?.data, null, 2));
     
     res.status(error.response?.status || 500).json({
       error: {
-        message: error.message || 'Internal server error',
+        message: error.response?.data?.error?.message || error.message || 'Internal server error',
         type: 'invalid_request_error',
         code: error.response?.status || 500
       }
     });
-  }
-});
 
 
 app.all('*', (req, res) => {
